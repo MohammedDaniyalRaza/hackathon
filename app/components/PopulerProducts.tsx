@@ -39,7 +39,7 @@ export function PopularProducts() {
     {
       id: 3,
       image:
-        "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&q=80",
+        "/image.png",
       name: "The Dandy Stool",
       price: 99.0,
     },

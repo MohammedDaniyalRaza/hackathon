@@ -46,7 +46,7 @@ const Navigation = () => {
               <Link
                 key={index}
                 href={item.path}
-                className="font-medium text-[14px]"
+                className="font-medium text-[14px] first:text-[#007580]"
               >
                 <li>{item.text}</li>
               </Link>
