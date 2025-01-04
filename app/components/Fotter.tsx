@@ -204,9 +204,9 @@ function FooterSection() {
         {/* Bottom Section */}
         <div className="mt-12 flex flex-col items-center justify-between space-y-4 border-t pt-8 text-sm md:flex-row md:space-y-0">
           <p className="text-muted-foreground">
-            © 2024 - Made by{" "}
+          @ 2021 - Blogy - Designed & Develop by{" "}
             <Link href="#" className="hover:text-black/60">
-              Muhammad Hasnain
+              Daniyal Raza
             </Link>
           </p>
           <div className="flex items-center space-x-4">
@@ -219,13 +219,6 @@ function FooterSection() {
               quality={100}
               className="object-center object-cover invert"
             />
-            {/* <Image
-              src="/placeholder.svg"
-              alt="Visa"
-              width={40}
-              height={24}
-              className="h-6 w-auto"
-            /> */}
           </div>
         </div>
       </div>

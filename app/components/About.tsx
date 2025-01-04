@@ -17,7 +17,7 @@ export function About() {
       </div>
       <div className="hidden md:block">
         <img
-          src="/assets/img4.png"
+          src="/chairs/img2.png"
           alt="Modern Chair"
           className="w-full h-[400px] object-cover rounded-lg"
         />

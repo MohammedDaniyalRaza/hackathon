@@ -7,7 +7,6 @@ const ProductPage = () => {
       <h1 className="text-center font-semibold text-3xl mb-8">All Products</h1>
       <ProductsGrid />
       <Newsletter />
-      {/* <ProductDetail /> */}
     </div>
   );
 };

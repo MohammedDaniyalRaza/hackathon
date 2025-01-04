@@ -66,11 +66,6 @@ const ProductsSection = () => {
       {/* Responsive Components */}
       <TopCategories />
       <div className="mt-10">
-        <div className="max-w-7xl mx-auto flex items-start py-10">
-          <h4 className="text-3xl uppercase text-start font-semibold text-gray-700 md:px-0 px-5">
-            Explore new and popular styles
-          </h4>
-        </div>
         <ExploreProducts />
       </div>
     </div>

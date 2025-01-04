@@ -9,7 +9,7 @@ export function ContactForm() {
           <input
             type="text"
             className="mt-1 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="John Doe"
+            placeholder="Abc"
           />
         </label>
       </div>
@@ -20,7 +20,7 @@ export function ContactForm() {
           <input
             type="email"
             className="mt-1 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="john@example.com"
+            placeholder="Abc@def.com"
           />
         </label>
       </div>
@@ -31,7 +31,7 @@ export function ContactForm() {
           <input
             type="text"
             className="mt-1 w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="How can we help?"
+            placeholder="This is an optional"
           />
         </label>
       </div>
@@ -41,7 +41,7 @@ export function ContactForm() {
           Message
           <input
             className="mt-1 w-full px-4 py-8 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Your message here..."
+            placeholder="Hi! i'd like to ask about"
           />
         </label>
       </div>

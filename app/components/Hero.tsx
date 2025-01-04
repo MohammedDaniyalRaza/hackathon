@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-
 const Hero = () => {
   return (
     <div className="w-full md:px-0 px-10">
@@ -45,6 +44,84 @@ const Hero = () => {
           />
         </div>
       </div>
+
+      {/* Companies */}
+        <div className="w-full bg-white md:px-0 px-5">
+          
+          <div className="max-w-7xl mx-auto h-[139px] md:flex items-center justify-center gap-16 grid grid-cols-4">
+                 
+                    <div>
+                      <Image
+                        src={"/zapier.png"}
+                        alt={"Image 1"}
+                        width={120}
+                        height={100}
+                        priority
+                        quality={100}
+                      />
+                    </div>
+                    <div>
+                      <Image
+                        src={"/pipedrive.png"}
+                        alt={"Image 1"}
+                        width={120}
+                        height={100}
+                        priority
+                        quality={100}
+                      />
+                    </div>
+                    <div>
+                      <Image
+                        src={"/cibbank.png"}
+                        alt={"Image 1"}
+                        width={120}
+                        height={100}
+                        priority
+                        quality={100}
+                      />
+                    </div>
+                    <div>
+                      <Image
+                        src={"/zlogo.png"}
+                        alt={"Image 1"}
+                        width={120}
+                        height={100}
+                        priority
+                        quality={100}
+                      />
+                    </div>
+                    <div>
+                      <Image
+                        src={"/burnttoast.png"}
+                        alt={"Image 1"}
+                        width={120}
+                        height={100}
+                        priority
+                        quality={100}
+                      />
+                    </div>
+                    <div>
+                      <Image
+                        src={"/pandadoc.png"}
+                        alt={"Image 1"}
+                        width={120}
+                        height={100}
+                        priority
+                        quality={100}
+                      />
+                    </div>
+                    <div>
+                      <Image
+                        src={"/moz.png"}
+                        alt={"Image 1"}
+                        width={120}
+                        height={100}
+                        priority
+                        quality={100}
+                      />
+                    </div>
+                </div>
+        </div>
     </div>
   );
 };

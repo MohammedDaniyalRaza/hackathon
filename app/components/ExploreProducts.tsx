@@ -4,36 +4,46 @@ import Image from "next/image";
 const ExploreProducts = () => {
   return (
     // <div className="w-full py-10 flex items-center justify-center">
-    <div className="max-w-7xl mx-auto flex items-start justify-center gap-5 px-4 md:px-0">
-      {/* Main Image Section */}
+    <div className="max-w-7xl mx-auto flex items-start justify-center gap-5 px-4 md:px-0 mb-10 ">
+      {/* Horizontal Text */}
+      <Image src="/horizontalText.png"
+        alt="horizontal text"
+        width={110}
+        height={100}
+        priority
+        quality={100}
+        className="object-center object-cover"
+        />
+
+        {/* Main Image Section */}
       <div className="w-full items-center">
         {/* Main Image */}
+        
         <Image
-          src={"/assets/img1.png"}
+          src={"/chairs/img3.png"}
           alt="img 1 product"
-          width={648}
+          width={620}
           height={648}
           priority
           quality={100}
-          className="object-cover rounded-lg" // Added `ml-10` for spacing
+          className="object-cover"
         />
       </div>
 
       {/* Product Grid Section */}
-      <div className="w-full md:w-1/2 grid grid-cols-2 sm:grid-cols-2 gap-4">
+      <div className="w-[1250px] grid grid-cols-2 sm:grid-cols-2 gap-3">
         {exploreNewProductsData.map((item, index) => (
           <Image
             key={index}
             src={item.image}
             alt={item.alt}
-            width={312}
-            height={312}
+            width={400}
+            height={400}
             className="object-cover rounded-lg"
           />
         ))}
       </div>
     </div>
-    // </div>
   );
 };
 

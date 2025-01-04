@@ -1,46 +1,7 @@
-export const companies = [
-    {
-        id: 1,
-        alt: "zapier logo",
-        src: "/zapier.png"
-    },
-    {
-        id: 2,
-        alt: "pipe drive image",
-        src: "/pipedrive.png"
-    },
-    {
-        id: 3,
-        alt: "cib bank image",
-        src: "/cibbank.png"
-    },
-    {
-        id: 4,
-        alt: "z logo image",
-        src: "./zlogo.png"
-    },
-    {
-        id: 5,
-        alt: "burnt toast",
-        src: "/burnttoast.png"
-    },
-    {
-        id: 6,
-        alt: "panda doc image",
-        src: "/pandadoc.png"
-    },
-    {
-        id: 7,
-        alt: "moz image",
-        src: "/moz.png"
-    },
-]
-
-
 export const productsData = [
     {
         id: 1,
-        image: "/assets/img1.png",
+        image: "/chairs/img1.png",
         alt: "product 1 image",
         title: "Library Stool Chair",
         titleStyle: "text-[#4DBCC6]",
@@ -53,7 +14,7 @@ export const productsData = [
     },
     {
         id: 2,
-        image: "/assets/img2.png",
+        image: "/chairs/img2.png",
         alt: "product 2 image",
         title: "Library Stool Chair",
         // titleStyle: "text-[#029FAE]",
@@ -66,7 +27,7 @@ export const productsData = [
     },
     {
         id: 3,
-        image: "/assets/img3.png",
+        image: "/chairs/img3.png",
         alt: "product 3 image",
         title: "Library Stool Chair",
         // titleStyle: "text-[#029FAE]",
@@ -78,7 +39,7 @@ export const productsData = [
     },
     {
         id: 4,
-        image: "/assets/img4.png",
+        image: "/chairs/img4.png",
         alt: "product 4 image",
         title: "Library Stool Chair",
         // titleStyle: "text-[#029FAE]",
@@ -94,7 +55,7 @@ export const productsData = [
 export const topCategoriesData = [
     {
         id: 1,
-        image: "/assets/categorie1.png",
+        image: "/chairs/categorie1.png",
         alt: "product 1 image",
         title: "Wing Chair",
         titleStyle: "text-[#4DBCC6]",
@@ -108,7 +69,7 @@ export const topCategoriesData = [
     },
     {
         id: 2,
-        image: "/assets/categorie2.png",
+        image: "/chairs/categorie2.png",
         alt: "product 2 image",
         title: "Wooden Chair",
         // titleStyle: "text-[#029FAE]",
@@ -122,7 +83,7 @@ export const topCategoriesData = [
     },
     {
         id: 3,
-        image: "/assets/categorie3.png",
+        image: "/chairs/categorie3.png",
         alt: "product 3 image",
         title: "Desk Chair",
         // titleStyle: "text-[#029FAE]",
@@ -133,25 +94,13 @@ export const topCategoriesData = [
         cartStyle: "bg-[#F0F2F3] text-[#000]",
         productCount: "154 Products"
     },
-    // {
-    //     id: 4,
-    //     image: "/assets/img4.png",
-    //     alt: "product 4 image",
-    //     title: "Library Stool Chair",
-    //     // titleStyle: "text-[#029FAE]",
-    //     price: 20,
-    //     discountedPrice: 20,
-    //     isNew: false,
-    //     cartIcon: "/cart.svg",
-    //     cartStyle: "bg-[#F0F2F3] text-[#000]",
-    // },
 
 ]
 
 export const exploreNewProductsData = [
     {
         id: 1,
-        image: "/assets/img4.png",
+        image: "/chairs/img4.png",
         alt: "product 1 image",
         title: "Library Stool Chair",
         titleStyle: "text-[#4DBCC6]",
@@ -164,7 +113,7 @@ export const exploreNewProductsData = [
     },
     {
         id: 2,
-        image: "/assets/categorie4.png",
+        image: "/chairs/categorie4.png",
         alt: "product 2 image",
         title: "Library Stool Chair",
         // titleStyle: "text-[#029FAE]",
@@ -177,7 +126,7 @@ export const exploreNewProductsData = [
     },
     {
         id: 3,
-        image: "/assets/img2.png",
+        image: "/chairs/img2.png",
         alt: "product 3 image",
         title: "Library Stool Chair",
         // titleStyle: "text-[#029FAE]",
@@ -189,7 +138,7 @@ export const exploreNewProductsData = [
     },
     {
         id: 4,
-        image: "/assets/img2.png",
+        image: "/chairs/img2.png",
         alt: "product 4 image",
         title: "Library Stool Chair",
         // titleStyle: "text-[#029FAE]",
@@ -203,8 +152,6 @@ export const exploreNewProductsData = [
 ]
 
 
-// import { Product } from '../types';
-
 export const products = [
     {
         id: 1,
@@ -212,7 +159,7 @@ export const products = [
         name: 'Classic White Chair',
         titleStyle: "text-[#4DBCC6]",
         price: 20,
-        imageUrl: '/assets/img2.png',
+        imageUrl: '/chairs/img2.png',
         isNew: true,
         cartIcon: "/cart.svg",
         cartStyle: "bg-[#029FAE] text-[#000]",
@@ -224,7 +171,7 @@ export const products = [
         name: 'Pink Accent Chair',
         price: 20,
         originalPrice: 30,
-        imageUrl: '/assets/img1.png',
+        imageUrl: '/chairs/img1.png',
         isSale: true,
         cartIcon: "/cart.svg",
         cartStyle: "bg-[#F0F2F3] text-[#000]",
@@ -235,7 +182,7 @@ export const products = [
         alt: "product 4 image",
         name: 'Modern Orange Chair',
         price: 20,
-        imageUrl: '/assets/img3.png',
+        imageUrl: '/chairs/img3.png',
         cartIcon: "/cart.svg",
         cartStyle: "bg-[#F0F2F3] text-[#000]",
 
@@ -245,7 +192,7 @@ export const products = [
         alt: "product 4 image",
         name: 'Tufted Ivory Chair',
         price: 20,
-        imageUrl: '/assets/img4.png',
+        imageUrl: '/chairs/img4.png',
         cartIcon: "/cart.svg",
         cartStyle: "bg-[#F0F2F3] text-[#000]",
 
@@ -255,7 +202,7 @@ export const products = [
         alt: "product 4 image",
         name: 'Designer Swivel Chair',
         price: 20,
-        imageUrl: '/assets/categorie1.png',
+        imageUrl: '/chairs/categorie2.png',
         isNew: true,
         cartIcon: "/cart.svg",
         cartStyle: "bg-[#029FAE] text-[#000]"
@@ -267,7 +214,7 @@ export const products = [
         name: 'Gray Dining Chair',
         price: 20,
         originalPrice: 25,
-        imageUrl: '/assets/categorie5.png',
+        imageUrl: '/chairs/categorie4.png',
         isSale: true,
         cartIcon: "/cart.svg",
         cartStyle: "bg-[#F0F2F3] text-[#000]",
@@ -278,7 +225,7 @@ export const products = [
         alt: "product 4 image",
         name: 'Modern Black Chair',
         price: 20,
-        imageUrl: '/assets/categorie4.png',
+        imageUrl: '/chairs/categorie5.png',
         cartIcon: "/cart.svg",
         cartStyle: "bg-[#F0F2F3] text-[#000]",
 
@@ -288,7 +235,50 @@ export const products = [
         alt: "product 4 image",
         name: 'Vintage White Chair',
         price: 20,
-        imageUrl: '/assets/img2.png',
+        imageUrl: '/chairs/img2.png',
+        cartIcon: "/cart.svg",
+        cartStyle: "bg-[#F0F2F3] text-[#000]",
+
+    },
+    {
+        id: 9,
+        alt: "product 4 image",
+        name: 'Vintage White Chair',
+        price: 20,
+        isNew:true,
+        imageUrl: '/chairs/categorie1.png',
+        cartIcon: "/cart.svg",
+        cartStyle: "bg-[#029FAE] text-[#000]",
+
+    },
+    {
+        id: 10,
+        alt: "product 4 image",
+        name: 'Pink Accent Chair',
+        price: 20,
+        originalPrice: 30,
+        imageUrl: '/chairs/img1.png',
+        isSale: true,
+        cartIcon: "/cart.svg",
+        cartStyle: "bg-[#F0F2F3] text-[#000]",
+
+    },
+    {
+        id: 11,
+        alt: "product 4 image",
+        name: 'Modern Orange Chair',
+        price: 20,
+        imageUrl: '/chairs/img3.png',
+        cartIcon: "/cart.svg",
+        cartStyle: "bg-[#F0F2F3] text-[#000]",
+
+    },
+    {
+        id: 12,
+        alt: "product 4 image",
+        name: 'Library Stool Chair',
+        price: 20,
+        imageUrl: '/chairs/categorie3.png',
         cartIcon: "/cart.svg",
         cartStyle: "bg-[#F0F2F3] text-[#000]",
 

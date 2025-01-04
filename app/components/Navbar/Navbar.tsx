@@ -57,7 +57,7 @@ const Navbar = () => {
           </div>
           <div>
             <Button className="bg-[#ffffff] hover:bg-[#dfdfdf] text-black rounded-lg">
-              <Link href={"/cart/page.tsx"} className="flex items-center gap-3">
+              <Link href={"/cart"} className="flex items-center gap-3">
                 <Image
                   src={"/cart.svg"}
                   alt="cart icon"

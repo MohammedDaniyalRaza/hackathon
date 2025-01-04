@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductCards } from "./ProductCards";
+// import { ProductCards } from "./ProductCards";
 import { products } from "@/lib";
 import { ProductBadge } from "./ProductBadge";
 import Image from "next/image";
