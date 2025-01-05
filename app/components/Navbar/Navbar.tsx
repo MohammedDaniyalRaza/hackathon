@@ -27,7 +27,7 @@ const Navbar = () => {
               </span>
             </Link>
             <Link
-              href={"/contact"}
+              href={"/Contact"}
               className="flex gap-2 text-[#ffffff] opacity-[80%]"
             >
               <Image
