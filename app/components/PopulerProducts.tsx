@@ -13,7 +13,7 @@ const Product = ({ image, name, price }: ProductProps) => (
         src={image}
         alt={name}
         className="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-[1.1]"
-      ></Image>
+      />
     </div>
     <h3 className="text-lg font-medium text-[#2A254B]">{name}</h3>
     <p className="text-[#2A254B]">${price.toFixed(2)}</p>

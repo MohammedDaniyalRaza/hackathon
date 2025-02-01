@@ -20,7 +20,7 @@ const InstagramDiscount: React.FC = () => {
                   src={product.imageUrl}
                   alt={product.alt}
                   className="w-full h-full object-cover hover:scale-[1.1] transition-transform duration-300"
-                ></Image>
+                />
               </Link>
             </div>
           ))}
