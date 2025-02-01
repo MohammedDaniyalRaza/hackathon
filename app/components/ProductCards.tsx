@@ -19,6 +19,8 @@ export function ProductCards() {
                 src={product.imageUrl}
                 alt={product.name}
                 className="h-full w-full object-cover absolute hover:scale-[1.1] object-center transition-all ease-in-out duration-[0.2s]"
+                width={300}
+                height={300}
               />
               <ProductBadge isNew={product.isNew} isSale={product.isSale} />
             </Link>

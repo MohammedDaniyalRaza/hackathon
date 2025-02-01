@@ -20,6 +20,8 @@ export function About() {
           src="/chairs/img2.png"
           alt="Modern Chair"
           className="w-full h-[400px] object-cover rounded-lg"
+          width={500}
+          height={500}
         />
       </div>
     </div>

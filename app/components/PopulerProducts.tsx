@@ -13,6 +13,8 @@ const Product = ({ image, name, price }: ProductProps) => (
         src={image}
         alt={name}
         className="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-[1.1]"
+        width={300}
+        height={300}
       />
     </div>
     <h3 className="text-lg font-medium text-[#2A254B]">{name}</h3>
@@ -25,14 +27,14 @@ export function PopularProducts() {
     {
       id: 1,
       image:
-        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80",
+        "/greensofa.jpeg",
       name: "The Poplar Inside Sofa",
       price: 99.0,
     },
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80",
+        "/blackchair.jpeg",
       name: "The Dandy Chair",
       price: 99.0,
     },

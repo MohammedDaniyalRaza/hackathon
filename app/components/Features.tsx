@@ -8,7 +8,7 @@ interface FeatureProps {
 
 const Feature = ({ icon, title, description }: FeatureProps) => (
   <div className="flex flex-col items-start p-6 bg-[#f9f9f9] rounded-lg shadow-sm">
-    <Image src={icon} alt={title} className="mb-4 text-[#007580]" ></Image>
+    <Image src={icon} alt={title} className="mb-4 text-[#007580]"  width={50} height={50}/>
     <h3 className="text-lg font-medium text-[#007580] mb-2">{title}</h3>
     <p className="text-[#007580] text-sm">{description}</p>
   </div>
