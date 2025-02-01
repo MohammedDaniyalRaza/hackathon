@@ -5,12 +5,12 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div className="w-full md:px-0 px-10">
-      <div className="max-w-7xl mx-auto bg-[#f0f2f3] h-[900px] hero-round flex md:flex-row flex-col items-center justify-between md:py-0 py-4 px-12">
-        <div className="max-w-xl h-[400px] flex flex-col items-start gap-8 md:order-none order-2">
+      <div className="max-w-7xl mx-auto bg-[#f0f2f3] h-[600px] hero-round flex md:flex-row flex-col items-center justify-between md:py-0 py-4 px-12">
+        <div className="max-w-xl h-[400px] flex flex-col items-start gap-8 md:order-none order-2 hero-div">
           <span className="font-medium text-[14px] text-[#272343]">
             Welcome to chairy
           </span>
-          <h1 className="font-bold text-6xl text-[#272343] capitalize">
+          <h1 className="font-bold text-6xl text-[#272343] capitalize txt-hero">
             Best Furniture
             <br /> Collection for your
             <br /> interior.
@@ -22,9 +22,10 @@ const Hero = () => {
             >
               Shop Now{" "}
               <Image
+                
                 src={"/arrowright.png"}
                 alt="arrow right"
-                className="hover:ml-[5px]"
+                className="hero-img"
                 width={24}
                 height={24}
               />
@@ -48,7 +49,7 @@ const Hero = () => {
       {/* Companies */}
         <div className="w-full bg-white md:px-0 px-5">
           
-          <div className="max-w-7xl mx-auto h-[139px] md:flex items-center justify-center gap-16 grid grid-cols-4">
+          <div className="max-w-7xl mx-auto h-[139px] md:flex items-center justify-center gap-16 grid grid-cols-3">
                  
                     <div>
                       <Image

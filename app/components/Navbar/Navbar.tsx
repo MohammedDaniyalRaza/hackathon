@@ -4,6 +4,7 @@ import Language from "../Lang";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Navigation from "../Navigation";
+import { products } from "@/lib";
 
 const Navbar = () => {
   return (
@@ -66,7 +67,7 @@ const Navbar = () => {
                 />
                 <p className="font-medium text-[12px]">Cart</p>
                 <span className="w-[20px] h-[20px] bg-[#007580] rounded-full text-white flex items-center justify-center">
-                  {2}
+                  {}
                 </span>
               </Link>
             </Button>

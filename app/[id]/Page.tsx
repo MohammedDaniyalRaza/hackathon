@@ -1,39 +1,55 @@
+"use client"; // Add this line at the top
+
 import React from "react";
 import { ShoppingCart } from "lucide-react";
 import { products } from "@/lib/index";
 import Link from "next/link";
-// import Image from "next/image";
+import { useCart } from "@/context/CartContext";
+import Image from "next/image";
+import toast, { Toaster } from "react-hot-toast"; // Import toast and Toaster
 
 const ProductDetail = ({ params }: { params: any }) => {
-  const { id } = params;
-
-  console.log(id);
-
-  const featuredProduct = {
-    name: "Library Stool Chair",
-    price: 99.0,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullus facilisis est vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageUrl: "/assets/img1.png",
-  };
+  const { id } = React.use(params); // Unwrap params using React.use()
+  const { addToCart } = useCart();
 
   const featuredProductID = products.find(
     (product) => product.id === Number(id)
   );
 
-  if (!featuredProduct) {
+  if (!featuredProductID) {
     return <div className="text-center">Product not found</div>;
   }
 
+  const handleAddToCart = () => {
+    if (!featuredProductID) {
+      toast.error("Product not found!");
+      return;
+    }
+  
+    addToCart({
+      id: featuredProductID.id,
+      name: featuredProductID.name,
+      price: featuredProductID.price,
+      imageUrl: featuredProductID.imageUrl,
+      quantity: 1, // Ensure quantity is included
+      liked: false, // Add liked property
+    });
+  
+    toast.success("Product added to cart!"); // Show popup
+  };
+
   return (
     <div className="max-w-7xl mx-auto md:px-0 px-5 mt-20">
+      <Toaster /> {/* Add Toaster component */}
       {id && id !== "" ? (
         <div className=" flex md:flex-row flex-col items-center justify-center gap-80">
           {/* Product Image */}
           <div className="bg-[#FFF3F3] rounded-lg overflow-hidden aspect-square">
-            <img
-              src={featuredProductID?.imageUrl!}
-              alt={featuredProductID?.name!}
+            <Image
+              src={featuredProductID.imageUrl}
+              alt={featuredProductID.name}
+              width={500} // Set width
+              height={500} // Set height
               className="w-full h-full object-cover"
             />
           </div>
@@ -41,16 +57,19 @@ const ProductDetail = ({ params }: { params: any }) => {
           {/* Product Info */}
           <div className="flex flex-col justify-center">
             <h1 className="text-3xl font-bold text-gray-900 mb-4">
-              {featuredProductID?.name}
+              {featuredProductID.name}
             </h1>
             <div className="w-[130px] text-[#fff] bg-[#029FAE] flex items-center justify-center text-lg font-semibold mb-4 rounded-3xl py-2">
-              <span>${featuredProductID?.price?.toFixed(2)} USD</span>
+              <span>${featuredProductID.price.toFixed(2)} USD</span>
             </div>
             <p className="text-gray-600 mb-6 max-w-xs">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. At sequi
               deleniti est totam repellendus dolorem!
             </p>
-            <button className="bg-[#029FAE] text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-[#028a97] transition-colors duration-300 w-fit">
+            <button
+              onClick={handleAddToCart} // Use handleAddToCart function
+              className="bg-[#029FAE] text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-[#028a97] transition-colors duration-300 w-fit"
+            >
               <ShoppingCart className="w-5 h-5" />
               Add to Cart
             </button>
@@ -74,9 +93,11 @@ const ProductDetail = ({ params }: { params: any }) => {
             <div key={product.id} className="group cursor-pointer">
               <div className="bg-gray-100 rounded-lg overflow-hidden mb-2">
                 <Link href={`/${product.id}`}>
-                  <img
+                  <Image
                     src={product.imageUrl}
                     alt={product.name}
+                    width={300} // Set width
+                    height={300} // Set height
                     className="w-full h-48 object-cover group-hover:scale-[1.1] transition-transform duration-300"
                   />
                 </Link>
