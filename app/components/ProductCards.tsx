@@ -15,11 +15,11 @@ export function ProductCards() {
         <div className="group relative" key={product.id}>
           <div className="aspect-square w-full relative overflow-hidden rounded-lg bg-gray-100 cursor-pointer">
             <Link href={`/${product.id}`}>
-              <img
+              <Image
                 src={product.imageUrl}
                 alt={product.name}
                 className="h-full w-full object-cover absolute hover:scale-[1.1] object-center transition-all ease-in-out duration-[0.2s]"
-              />
+              ></Image>
               <ProductBadge isNew={product.isNew} isSale={product.isSale} />
             </Link>
           </div>

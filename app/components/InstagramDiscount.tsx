@@ -1,7 +1,7 @@
 import React from "react";
 import { products } from "@/lib";
 import Link from "next/link";
-
+import Image from "next/image";
 const InstagramDiscount: React.FC = () => {
   return (
     <div className="py-12">
@@ -16,11 +16,11 @@ const InstagramDiscount: React.FC = () => {
               className="aspect-square overflow-hidden rounded-lg cursor-pointer"
             >
               <Link href={`/${product.id}`}>
-                <img
+                <Image
                   src={product.imageUrl}
                   alt={product.alt}
                   className="w-full h-full object-cover hover:scale-[1.1] transition-transform duration-300"
-                />
+                ></Image>
               </Link>
             </div>
           ))}
