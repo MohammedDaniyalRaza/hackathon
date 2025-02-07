@@ -10,7 +10,7 @@ const CartPage = () => {
 
   // Calculate subtotal, shipping, and total
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-  const shipping = subtotal > 0 ? "Free" : 0;
+  const shipping : any = subtotal > 0 ? "Free" : 0;
   const total = subtotal + (shipping === "Free" ? 0 : shipping);
 
   return (
