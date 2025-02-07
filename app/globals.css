@@ -118,3 +118,26 @@ body {
     font-size: 1.5rem;
   }
 }
+
+/* Clerk Modal Container */
+.clerk-modal {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5) !important; /* Optional: Adds a background overlay */
+}
+
+/* Clerk Modal Content */
+.clerk-modal-content {
+  position: relative !important;
+  margin: auto !important;
+  background: white !important; /* Optional: Adds a background color to the form */
+  padding: 20px !important; /* Optional: Adds padding to the form */
+  border-radius: 8px !important; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; /* Optional: Adds a shadow */
+}

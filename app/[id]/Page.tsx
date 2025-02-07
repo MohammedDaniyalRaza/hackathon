@@ -7,10 +7,12 @@ import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast"; // Import toast and Toaster
+import { useUser, SignInButton } from "@clerk/nextjs"; // Import useUser and SignInButton
 
 const ProductDetail = ({ params }: { params: any }) => {
-  const { id } = React.use(params); // Unwrap params using React.use()
+  const { id } = params; // Directly destructure params
   const { addToCart } = useCart();
+  const { isSignedIn } = useUser(); // Check if user is signed in
 
   const featuredProductID = products.find(
     (product) => product.id === Number(id)
@@ -21,11 +23,16 @@ const ProductDetail = ({ params }: { params: any }) => {
   }
 
   const handleAddToCart = () => {
+    if (!isSignedIn) {
+      toast.error("Please sign in to add items to cart!"); // Show error if user is not signed in
+      return;
+    }
+
     if (!featuredProductID) {
       toast.error("Product not found!");
       return;
     }
-  
+
     addToCart({
       id: featuredProductID.id,
       name: featuredProductID.name,
@@ -34,7 +41,7 @@ const ProductDetail = ({ params }: { params: any }) => {
       quantity: 1, // Ensure quantity is included
       liked: false, // Add liked property
     });
-  
+
     toast.success("Product added to cart!"); // Show popup
   };
 
@@ -66,13 +73,22 @@ const ProductDetail = ({ params }: { params: any }) => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. At sequi
               deleniti est totam repellendus dolorem!
             </p>
-            <button
-              onClick={handleAddToCart} // Use handleAddToCart function
-              className="bg-[#029FAE] text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-[#028a97] transition-colors duration-300 w-fit"
-            >
-              <ShoppingCart className="w-5 h-5" />
-              Add to Cart
-            </button>
+            {isSignedIn ? (
+              <button
+                onClick={handleAddToCart} // Use handleAddToCart function
+                className="bg-[#029FAE] text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-[#028a97] transition-colors duration-300 w-fit"
+              >
+                <ShoppingCart className="w-5 h-5" />
+                Add to Cart
+              </button>
+            ) : (
+              <SignInButton mode="modal">
+                <button className="bg-[#029FAE] text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-[#028a97] transition-colors duration-300 w-fit">
+                  <ShoppingCart className="w-5 h-5" />
+                  Sign In to Add to Cart
+                </button>
+              </SignInButton>
+            )}
           </div>
         </div>
       ) : null}
