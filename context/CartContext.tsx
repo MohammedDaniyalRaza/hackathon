@@ -18,7 +18,7 @@ interface CartContextType {
   removeFromCart: (id: number) => void;
   updateQuantity: (id: number, quantity: number) => void;
   toggleLike: (id: number) => void;
-  getTotalItems: ()=> number;
+
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
