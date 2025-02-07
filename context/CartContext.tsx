@@ -86,6 +86,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   );
 };
 
+// console.log("hello wor;d");
+
 export const useCart = () => {
   const context = useContext(CartContext);
   if (!context) {
